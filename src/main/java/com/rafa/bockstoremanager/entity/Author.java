@@ -3,6 +3,11 @@ package com.rafa.bockstoremanager.entity;
 import javax.persistence.*;
 
 @Entity
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

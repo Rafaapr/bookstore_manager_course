@@ -4,6 +4,10 @@ import javax.annotation.processing.Generated;
 import javax.persistence.*;
 
 @Entity
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,5 +25,7 @@ public class Book {
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     @JoinColumn(name = "author_id")
     private Author author;
+
+
 
 }
