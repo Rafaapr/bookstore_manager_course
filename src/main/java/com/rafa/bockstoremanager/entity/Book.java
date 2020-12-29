@@ -1,7 +1,13 @@
 package com.rafa.bockstoremanager.entity;
 
-import javax.annotation.processing.Generated;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
+
 
 @Entity
 @Data
@@ -25,7 +31,5 @@ public class Book {
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     @JoinColumn(name = "author_id")
     private Author author;
-
-
 
 }
